@@ -40,6 +40,7 @@ fggsgsf
 
   <dt>Delete venue</dt>
   <dd>
+    <% $var = @the_venue.id %>
     <a href="/delete_venue/<% @the_venue.id %>">
       Delete this venue
     </a>
@@ -58,8 +59,8 @@ fggsgsf
   <% @the_venue.comments.each do |comment| %>
   <tr>
     <td>
-       <%# comment.commenter.username %>
-      <%= comment.commenter.id %>
+       <%= comment.commenter.username %>
+      <%# comment.commenter.id %>
     </td>
 
     <td>

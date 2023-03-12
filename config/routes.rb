@@ -8,27 +8,19 @@ Rails.application.routes.draw do
    get("/users/:username", { :controller => "users", :action => "show" })
 
    get("/update_user/:user_id", { :controller => "users", :action => "update" })
-  # get("/users/:username", { :controller => "users", :action => "show" })
-  
-
-  # get("/insert_user_record", { :controller => "venues", :action => "create" })
-  get("/insert_user_record", { :controller => "users", :action => "create" })
-
-
-  
+   get("/insert_user_record", { :controller => "users", :action => "create" })
 
   get("/venues", { :controller => "venues", :action => "index" })
   get("/insert_venue_record", { :controller => "venues", :action => "create" })
   get("/venues/:venue_id", { :controller => "venues", :action => "show" })
 
-  # post("/update_venue/:the_id", { :controller => "application", :action => "update" })
-  get("/update_venue/:venue_id", { :controller => "venues", :action => "update" })
-
-  # get("/delete_venue/:id_to_delete", { :controller => "venue", :action => "destroy" })
-
-       
-  get("/delete_venue/", { :controller => "venues", :action => "destroy" })
-  
+  get("/delete_venue", { :controller => "venues", :action => "destroy" })
+ 
+  get("/update_venue/:venue_id", { :controller => "venues", :action => "update" }) 
   get("/insert_comment_record", { :controller => "comments", :action => "create" })
+
+
+
+  
  
 end
